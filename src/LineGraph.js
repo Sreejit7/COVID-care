@@ -47,15 +47,18 @@ const options = {
 };
 const casesTypeColors = {
   cases: {
-    hex: "#CC1034",
+    hex: "#A00205",
+    hex2: "#CB4245",
     multiplier: 400,
   },
   recovered: {
-    hex: "#7dd71d",
+    hex: "#3F7707",
+    hex2: "#A3CE78",
     multiplier: 600,
   },
   deaths: {
-    hex: "#fb4443",
+    hex: "#A00205",
+    hex2: "#CB4245",
     multiplier: 1000,
   },
 };
@@ -102,7 +105,7 @@ function LineGraph({casesType, ...props}) {
         data = {{
           datasets:[
             { 
-              backgroundColor: `${casesTypeColors[casesType].hex}`,
+              backgroundColor: `${casesTypeColors[casesType].hex2}`,
               borderColor: `${casesTypeColors[casesType].hex}`,
               data: data
             },
