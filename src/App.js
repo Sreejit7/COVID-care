@@ -66,51 +66,55 @@ function App() {
   };
   return (
     <div className="app">
-      <div className="app__left">
-        <div className = "app__header">
-          <h1>COVID-19 TRACKER</h1>
-          <FormControl className = "app__dropdown">
-            <Select variant = "outlined" onChange = {onCountryChange} value = {country}>
-              <MenuItem value = "worldwide">Worldwide</MenuItem>
-              {countries.map((country) => (
-                  <MenuItem value = {country.value}>{country.name}</MenuItem>
-                ))}
-            </Select>
-          </FormControl>
-        </div>
-
-        <div className="app__stats">
-          <InfoBox 
-            isRed
-            active = {casesType === "cases"}
-            onClick = {() => setCasesType("cases")} 
-            title = "Coronavirus cases" 
-            cases = {prettyPrintStat(countryInfo.todayCases)} 
-            total = {prettyPrintStat(countryInfo.cases)}/>
-          <InfoBox 
-            active = {casesType === "recovered"}
-            onClick = {() => setCasesType("recovered")} 
-            title = "Recovered" 
-            cases = {prettyPrintStat(countryInfo.todayRecovered)} 
-            total = {prettyPrintStat(countryInfo.recovered)}/>
-          <InfoBox
-            isRed 
-            active = {casesType === "deaths"}
-            onClick = {() => setCasesType("deaths")} 
-            title = "Deaths" 
-            cases = {prettyPrintStat(countryInfo.todayDeaths)} 
-            total = {prettyPrintStat(countryInfo.deaths)}/>
-        </div>
-
-        <Map
-          casesType = {casesType}
-          countries = {mapCountries}
-          center = {mapCenter}
-          zoom = {mapZoom}
-        />
-
+      <div className="app__navbar">
+        <h1 className="app__title">COVID Care</h1>
       </div>
-      <Card className="app__right">
+      <div className="app__body">
+        <div className="app__left">
+          <div className = "app__header">
+            <h1>COVID-19 TRACKER</h1>
+            <FormControl className = "app__dropdown">
+              <Select variant = "outlined" onChange = {onCountryChange} value = {country}>
+                <MenuItem value = "worldwide">Worldwide</MenuItem>
+                {countries.map((country) => (
+                    <MenuItem value = {country.value}>{country.name}</MenuItem>
+                  ))}
+              </Select>
+            </FormControl>
+          </div>
+
+          <div className="app__stats">
+            <InfoBox 
+              isRed
+              active = {casesType === "cases"}
+              onClick = {() => setCasesType("cases")} 
+              title = "Coronavirus cases" 
+              cases = {prettyPrintStat(countryInfo.todayCases)} 
+              total = {prettyPrintStat(countryInfo.cases)}/>
+            <InfoBox 
+              active = {casesType === "recovered"}
+              onClick = {() => setCasesType("recovered")} 
+              title = "Recovered" 
+              cases = {prettyPrintStat(countryInfo.todayRecovered)} 
+              total = {prettyPrintStat(countryInfo.recovered)}/>
+            <InfoBox
+              isRed 
+              active = {casesType === "deaths"}
+              onClick = {() => setCasesType("deaths")} 
+              title = "Deaths" 
+              cases = {prettyPrintStat(countryInfo.todayDeaths)} 
+              total = {prettyPrintStat(countryInfo.deaths)}/>
+          </div>
+
+          <Map
+            casesType = {casesType}
+            countries = {mapCountries}
+            center = {mapCenter}
+            zoom = {mapZoom}
+          />
+
+        </div>
+        <Card className="app__right">
         <CardContent>
           <h3>Live Cases by Country</h3>
           <Table countries = {tableData} />
@@ -118,6 +122,7 @@ function App() {
           <LineGraph className = "app__graph" casesType = {casesType}/>
         </CardContent>
       </Card>
+      </div>
     </div>
 
   );
