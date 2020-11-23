@@ -1,5 +1,6 @@
-import { FormControl, MenuItem, Select,Card, CardContent} from "@material-ui/core";
+import { FormControl, MenuItem, Select,Card, CardContent, Button} from "@material-ui/core";
 import React,{useEffect, useState} from "react";
+import {Link} from 'react-router-dom';
 import InfoBox from './Infobox';
 import Map from './Map';
 import Table from './Table';
@@ -39,8 +40,8 @@ function App() {
       });
     };
     getCountries();
-  },[]);
-
+  },[])
+  
   const onCountryChange = async(e) => {
     //https://disease.sh/v3/covid-19/all
     //https://disease.sh/v3/covid-19/countries/[countryCode]
@@ -68,6 +69,9 @@ function App() {
     <div className="app">
       <div className="app__navbar">
         <h1 className="app__title">COVID Care</h1>
+        <Link to = '/vaccine'>
+          <h2>Vaccine Info</h2>
+        </Link>
       </div>
       <div className="app__body">
         <div className="app__left">
