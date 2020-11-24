@@ -28,3 +28,7 @@
   width: 90%;
   margin: auto;
 }
+.vaccine__header > h1 {
+  color: rgb(15, 105, 146);
+  text-shadow: rgb(65, 94, 150);
+}

@@ -14,7 +14,7 @@ function VaccineInfo() {
   return (
     <div className = "vaccine__page">
       <div className="vaccine__header">
-        <h1>COVID-19 Vaccine Info</h1>
+        <h1>COVID-19 VACCINE INFO</h1>
         <tr>
           <td><h2>Vaccine Name</h2></td>
           <td><h2>Manufacturers</h2></td>
