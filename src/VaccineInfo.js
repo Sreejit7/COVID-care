@@ -15,13 +15,13 @@ function VaccineInfo() {
     <div className = "vaccine__page">
       <div className="vaccine__header">
         <h1>COVID-19 Vaccine Info</h1>
-      </div>
-      <div className = "vaccine__info">
         <tr>
           <td><h2>Vaccine Name</h2></td>
           <td><h2>Manufacturers</h2></td>
           <td><h2>Current Trial Phase</h2></td>
         </tr>
+      </div>
+      <div className = "vaccine__info">
         {vaccineData.map(({candidate,sponsors,trialPhase}) => (
           <tr>
             <td><strong style = {{color:"#7d1b07",margin:"auto"}}>{candidate}</strong></td>

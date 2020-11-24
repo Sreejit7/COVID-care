@@ -4,10 +4,12 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './index.css';
 import App from './App';
 import VaccineInfo from './VaccineInfo';
+import Header from './Header';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+      <Header/>
       <Switch>
         <Route path = "/vaccine">
           <VaccineInfo/>
