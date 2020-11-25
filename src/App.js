@@ -33,14 +33,14 @@ function App() {
           name: country.country,
           value: country.countryInfo.iso2
         }));
-        const sortedData = sortData(data);
+        const sortedData = sortData(data,casesType);
         setTableData(sortedData);
         setCountries(countries);
         setMapCountries(data);
       });
     };
     getCountries();
-  },[])
+  },[casesType])
   
   const onCountryChange = async(e) => {
     //https://disease.sh/v3/covid-19/all
@@ -114,8 +114,8 @@ function App() {
         </div>
         <Card className="app__right">
         <CardContent>
-          <h3>Live Cases by Country</h3>
-          <Table countries = {tableData} />
+          <h3 style = {{textAlign:"center"}}>Live {casesType} by Country</h3>
+          <Table countries = {tableData} casesType = {casesType}/>
           <h3 className = 'app__graphTitle'>Worlwide new {casesType}</h3>
           <LineGraph className = "app__graph" casesType = {casesType}/>
         </CardContent>

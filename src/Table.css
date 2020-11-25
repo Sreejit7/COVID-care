@@ -14,3 +14,9 @@
 .table td{
   padding: 0.5rem;
 }
+.table--green{
+  color: rgb(25, 146, 21);
+}
+.table--red{
+  color: rgb(124, 12, 12);
+}

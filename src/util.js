@@ -1,9 +1,15 @@
 import numeral from 'numeral';
 import {Circle , Popup} from 'react-leaflet';
 import './Map.css';
-export const sortData = (data) => {
+export const sortData = (data,casesType) => {
   let sortedData = [...data];
-  return sortedData.sort((a,b) => (a.cases > b.cases? -1 : 1));
+  switch(casesType){
+    case 'cases': return sortedData.sort((a,b) => (a.cases > b.cases? -1 : 1));
+    case 'recovered':  return sortedData.sort((a,b) => (a.recovered > b.recovered? -1 : 1));
+    case 'deaths':  return sortedData.sort((a,b) => (a.deaths > b.deaths? -1 : 1));
+    default:
+  }
+  
 }
 export const prettyPrintStat = (stat) => 
   stat? `+${numeral(stat).format("0.0a")}`: "+0";
