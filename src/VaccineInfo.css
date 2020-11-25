@@ -33,3 +33,10 @@
   color: rgb(15, 105, 146);
   text-shadow: rgb(65, 94, 150);
 }
+.trial--green{
+  color: rgb(62, 161, 207);
+  font-weight: bolder;
+}
+.trial--normal{
+  color: rgb(39, 32, 32);
+}

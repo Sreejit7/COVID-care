@@ -9,7 +9,7 @@ function VaccineInfo() {
     .then((data) =>{
       setVaccineData(data.data);
       //console.log(data);
-      console.log(data.data);
+      //console.log(data.data);
     })
   },[])
   return (
@@ -32,7 +32,7 @@ function VaccineInfo() {
                 <li style = {{textAlign:"left",marginLeft:"50px"}} key = {index}>{item}</li>
               )
             })}</td>
-            <td>{trialPhase}</td>
+            <td className = {trialPhase === 'Phase 3'?"trial--green":"trial--normal"}>{trialPhase}</td>
           </tr>
         ))}
       </div>

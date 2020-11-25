@@ -22,7 +22,7 @@ const casesTypeColors = {
     multiplier: 400,
   },
   recovered: {
-    hex: "#A3CE78",
+    hex: "#63cc18",
     rgb: "rgb(125, 215, 29)",
     half_op: "rgba(125, 215, 29, 0.5)",
     multiplier: 800,
@@ -39,12 +39,15 @@ export const showDataOnMap = (data, casesType) =>
   data.map((country) => (
     <Circle
       center = {[country.countryInfo.lat, country.countryInfo.long]}
-      fillOpacity = {0.4}
-      color= {casesTypeColors[casesType].rgb}
-      fillColor={casesTypeColors[casesType].rgb}
+      fillColor={casesTypeColors[casesType].hex}
       radius={
         Math.sqrt(country[casesType]) * casesTypeColors[casesType].multiplier
       }
+      pathOptions = {{
+        color:casesTypeColors[casesType].hex,
+        fillColor:casesTypeColors[casesType].hex,
+        fillOpacity:0.4
+      }}
     >
       <Popup>
         <div className = 'info-container'>

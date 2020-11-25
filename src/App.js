@@ -116,7 +116,7 @@ function App() {
         <CardContent>
           <h3 style = {{textAlign:"center"}}>Live {casesType} by Country</h3>
           <Table countries = {tableData} casesType = {casesType}/>
-          <h3 className = 'app__graphTitle'>Worlwide new {casesType}</h3>
+          <h3 style = {{textAlign:"center"}} className = 'app__graphTitle'>Worlwide new {casesType}</h3>
           <LineGraph className = "app__graph" casesType = {casesType}/>
         </CardContent>
       </Card>
