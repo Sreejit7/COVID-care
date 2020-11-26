@@ -41,7 +41,6 @@ function App() {
     };
     getCountries();
   },[casesType])
-  
   const onCountryChange = async(e) => {
     //https://disease.sh/v3/covid-19/all
     //https://disease.sh/v3/covid-19/countries/[countryCode]
@@ -58,13 +57,14 @@ function App() {
       .then((data) => {
         setCountry(countryCode);
         setCountryInfo(data);
-        setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+        setMapCenter((countryCode === 'worldwide')?[34.80746,-40.4796]:[data.countryInfo.lat, data.countryInfo.long]);
         setMapZoom(4);
         //console.log(data.countryInfo.lat,data.countryInfo.long);
       });   
       
       console.log(countryInfo);
   };
+  
   return (
     <div className="app">
       <div className="app__body">
