@@ -7,7 +7,7 @@ function Header() {
     <div className="app__navbar">
         <Sidebar/>
         <Link to = "/">
-          <h1 className="app__title">COVID Care</h1>
+          <h1 className="app__title">COVID CARE</h1>
         </Link>
     </div>
   )
