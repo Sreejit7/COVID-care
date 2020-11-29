@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import {Popup} from 'react-leaflet';
+//import Popup from 'reactjs-popup';
 import './VaccineInfo.css';
 function VaccineInfo() {
   const [vaccineData, setVaccineData] = useState([]);
@@ -9,7 +9,7 @@ function VaccineInfo() {
     .then((data) =>{
       setVaccineData(data.data);
       //console.log(data);
-      //console.log(data.data);
+      console.log(data.data);
     })
   },[])
   return (
@@ -23,9 +23,10 @@ function VaccineInfo() {
         </tr>
       </div>
       <div className = "vaccine__info">
-        {vaccineData.map(({candidate,sponsors,trialPhase}) => (
+        {vaccineData.map(({candidate, sponsors,trialPhase}) => (
           <tr>
-            <td><strong style = {{color:"#7d1b07",margin:"auto"}}>{candidate}</strong>
+            <td>
+              <strong style = {{color:"#7d1b07",margin:"auto"}}>{candidate}</strong>
             </td>
             <td>{sponsors.map((item,index) => {
               return(

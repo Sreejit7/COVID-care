@@ -1,5 +1,6 @@
 body{
     background-color: #f5f6fa;
+    
 }
 .app__navbar{
     background-color: #020d24;
@@ -16,7 +17,6 @@ body{
     margin-left: 30px;
     margin-top: 10px;
     color: #f5f6fa;
-
 }
 
 .app__body{

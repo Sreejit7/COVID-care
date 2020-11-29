@@ -1,7 +1,7 @@
 .vaccine__info{
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 10px;
   overflow: scroll;
   height: 100vh;
   color: #1f1d1d;
@@ -39,4 +39,5 @@
 }
 .trial--normal{
   color: rgb(39, 32, 32);
+  font-weight: 500;
 }
