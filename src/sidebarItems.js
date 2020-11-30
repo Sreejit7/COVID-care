@@ -1,6 +1,7 @@
 import React from 'react';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
 import TimelineIcon from '@material-ui/icons/Timeline';
+import InfoIcon from '@material-ui/icons/Info';
 export const sidebarItems = [
   {
     title: "COVID-19 Tracker",
@@ -13,5 +14,6 @@ export const sidebarItems = [
     path: "/vaccine",
     icon: <LocalHospitalIcon/>,
     cName: "sidebar__text"
-  }
+  },
+  
 ]

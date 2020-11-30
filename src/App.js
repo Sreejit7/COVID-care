@@ -62,7 +62,7 @@ function App() {
         //console.log(data.countryInfo.lat,data.countryInfo.long);
       });   
       
-      console.log(countryInfo);
+      //console.log(countryInfo);
   };
   
   return (
