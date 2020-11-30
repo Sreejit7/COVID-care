@@ -1,6 +1,11 @@
 *{
   padding: 0;
 }
+.sidebar__logo{
+  margin-left: 4px;
+  height: 40px;
+  width: 200px;
+}
 .sidebar__icon{
   margin-left: 15px;
   font-size: 3rem;

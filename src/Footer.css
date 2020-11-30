@@ -7,7 +7,19 @@
   color: white;
   text-align: center;
   margin-top: 5px;
+  justify-content: center;
 }
-.footer > span{
+.footer__items > span{
+  margin-top: 10px;
+  margin-left: 8px;
+}
+.footer__logo{
+  margin-top: 10px;
+  margin-left: 0px;
+  height: 26px;
+  width: 150px;
+}
+.footer__items{
+  display: flex;
   margin: auto;
 }
