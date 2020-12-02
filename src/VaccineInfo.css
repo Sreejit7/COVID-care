@@ -1,7 +1,15 @@
+.vaccine__img{
+  position: relative;
+  margin-top: -10px;
+  width: 100%;
+  z-index: -1;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1),rgba(0,0,0,0));
+  height: 220px;
+}
 .vaccine__info{
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: -20px;
   overflow: scroll;
   height: 100vh;
   color: #1f1d1d;
@@ -12,7 +20,10 @@
   min-width: 500px;
 }
 .vaccine__info tr:nth-of-type(odd){
-  background-color: #eeeef0;
+  background-color: #e8ebeb;
+}
+.vaccine__info tr:nth-of-type(even){
+  background-color: rgba(240, 239, 239, 0.897);
 }
 .vaccine__info tr,.vaccine__header tr{
   display: flex;
@@ -27,10 +38,18 @@
   padding: 10px;
   text-align: center;
   width: 90%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.vaccine__header > h1,.vaccine__header >  tr{
+  margin-top: -30px;
+}
+.vaccine__header > tr > td > h2{
+  color: rgb(8, 8, 8);
 }
 .vaccine__header > h1 {
-  color: rgb(15, 105, 146);
+  color: rgb(236, 121, 13);
   text-shadow: rgb(65, 94, 150);
 }
 .trial--green{

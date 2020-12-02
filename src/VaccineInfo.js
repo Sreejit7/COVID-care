@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react';
+import {Link} from 'react-router-dom';
 //import Popup from 'reactjs-popup';
 import './VaccineInfo.css';
 function VaccineInfo() {
@@ -15,6 +16,9 @@ function VaccineInfo() {
   return (
     <div className = "vaccine__page">
       <div className="vaccine__header">
+        <img className = "vaccine__img" 
+             src = "https://images.indianexpress.com/2020/11/COVID-19-Vaccine-3-1.jpg"
+             alt = ""/> 
         <h1>COVID-19 VACCINE INFO</h1>
         <tr>
           <td><h2>Vaccine Name</h2></td>

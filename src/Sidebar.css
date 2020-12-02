@@ -47,7 +47,6 @@
 .sidebar__menu.active{
   left: 0;
   transition: 350ms;
-  z-index: 1;
 }
 .sidebar__items{
   width: 100%;
