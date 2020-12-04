@@ -11,6 +11,7 @@ import { prettyPrintStat, sortData } from "./util";
 function App() {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState('worldwide');
+  const [countryName, setCountryName] = useState("Worldwide");
   const [countryInfo, setCountryInfo] = useState({});
   const [tableData, setTableData] = useState([]);
   const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796});
@@ -56,8 +57,9 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setCountry(countryCode);
+        setCountryName(countryCode === 'worldwide'? "Worldwide" :data.country);
         setCountryInfo(data);
-        setMapCenter((countryCode === 'worldwide')?[34.80746,-40.4796]:[data.countryInfo.lat, data.countryInfo.long]);
+        setMapCenter((countryCode === 'worldwide')?{lat:34.80746, lng: -40.4796}:{lat: data.countryInfo.lat, lng: data.countryInfo.long});
         setMapZoom(4);
         //console.log(data.countryInfo.lat,data.countryInfo.long);
       });   
@@ -116,8 +118,8 @@ function App() {
         <CardContent>
           <h3 style = {{textAlign:"center"}}>Live {casesType} by Country</h3>
           <Table countries = {tableData} casesType = {casesType}/>
-          <h3 style = {{textAlign:"center"}} className = 'app__graphTitle'>Worlwide new {casesType}</h3>
-          <LineGraph className = "app__graph" casesType = {casesType}/>
+          <h3 style = {{textAlign:"center"}} className = 'app__graphTitle'>{countryName} new {casesType}</h3>
+          <LineGraph className = "app__graph" casesType = {casesType} country = {country}/>
         </CardContent>
       </Card>
       </div>
