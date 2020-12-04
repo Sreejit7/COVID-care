@@ -16,8 +16,12 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid gray;
   min-width: 500px;
+}
+.vaccine__icon{
+  color: black;
+  margin-left: 4px;
+  margin-top: 4px;
 }
 .vaccine__info tr:nth-of-type(odd){
   background-color: #e8ebeb;

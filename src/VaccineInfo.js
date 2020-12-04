@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react';
+import InfoIcon from '@material-ui/icons/Info';
 import {Link} from 'react-router-dom';
 //import Popup from 'reactjs-popup';
 import './VaccineInfo.css';
@@ -33,8 +34,11 @@ function VaccineInfo() {
               <strong style = {{color:"#7d1b07",margin:"auto"}}>{candidate}</strong>
             </td>
             <td>{sponsors.map((item,index) => {
-              return(
-                <li style = {{textAlign:"left",marginLeft:"50px"}} key = {index}>{item}</li>
+              return(                
+                <li style = {{textAlign:"left",marginLeft:"50px"}} 
+                    key = {index}>
+                    {sponsors[0] !== "" ? item:" NA "}
+                </li> 
               )
             })}</td>
             <td className = {trialPhase === 'Phase 3'?"trial--green":"trial--normal"}>{trialPhase}</td>
