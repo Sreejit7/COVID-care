@@ -120,7 +120,7 @@ function App() {
         <CardContent>
           <div className="table__button">
             <h4> Show Data For: </h4>
-            <button onClick = {() => setAllTime(false)}>24h</button>
+            <button onClick = {() => setAllTime(false)}>Last 24h</button>
             <button onClick = {() => setAllTime(true)}>All-Time</button>
           </div>
           <h3 style = {{textAlign:"center"}}>Live {casesType} by Country</h3>
