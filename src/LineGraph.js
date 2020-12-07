@@ -65,21 +65,21 @@ const casesTypeColors = {
 const buildChartData = (data, casesType) => {
   const chartData = [];
   let lastDataPoint;
-  for (let date in data.cases) {
-    if(lastDataPoint){
-      let newDataPoint = {
-        x: date,
-        y: data[casesType][date] - lastDataPoint
+    for (let date in data.cases) {
+      if(lastDataPoint){
+        let newDataPoint = {
+          x: date,
+          y: data[casesType][date] - lastDataPoint
+        }
+        chartData.push(newDataPoint);
       }
-      chartData.push(newDataPoint);
-    }
-    lastDataPoint = data[casesType][date];
-  }
+      lastDataPoint = data[casesType][date];
+    }  
   return chartData;
 };
 function LineGraph({casesType, country, ...props}) { 
   const [data, setData] = useState({});
-
+  const [noData, setNoData] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       const url = country === "worldwide" ? "https://disease.sh/v3/covid-19/historical/all?lastdays=120"
@@ -89,11 +89,13 @@ function LineGraph({casesType, country, ...props}) {
           return response.json();
         })
         .then((data) => {
+          setNoData(false);
           let chartData = country === "worldwide"? buildChartData(data, casesType) : buildChartData(data.timeline, casesType);
           setData(chartData);
           //console.log(chartData);
           // buildChart(chartData);
-        });
+        })
+        .catch( err => setNoData(true));
     };
 
     fetchData();
@@ -101,7 +103,7 @@ function LineGraph({casesType, country, ...props}) {
 
   return (
     <div className = {props.className}>
-      {data?.length > 0 && (
+      {!noData && data?.length > 0 && (
         <Line  
         options = {options}
         data = {{
@@ -115,7 +117,11 @@ function LineGraph({casesType, country, ...props}) {
         }}
       />
       )}
-      
+      {noData && 
+          <strong style = {{margin:"auto", padding:"5px"}}>
+              Sorry, no data history found for this coutry
+          </strong>
+      }      
     </div>
   )
 }

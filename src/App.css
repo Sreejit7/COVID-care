@@ -57,6 +57,9 @@ body{
 }
 .app__graph{
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .app__graphTitle{
     margin-top: 20px;

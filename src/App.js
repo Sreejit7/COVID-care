@@ -14,7 +14,7 @@ function App() {
   const [countryName, setCountryName] = useState("Worldwide");
   const [countryInfo, setCountryInfo] = useState({});
   const [tableData, setTableData] = useState([]);
-  const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796});
+  const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
   const [mapZoom, setMapZoom] = useState(3);
   const [mapCountries, setMapCountries] = useState([]);
   const [casesType, setCasesType] = useState("cases");
@@ -34,7 +34,7 @@ function App() {
           name: country.country,
           value: country.countryInfo.iso2
         }));
-        const sortedData = sortData(data,casesType);
+        let sortedData = sortData(data,casesType);
         setTableData(sortedData);
         setCountries(countries);
         setMapCountries(data);
@@ -59,7 +59,9 @@ function App() {
         setCountry(countryCode);
         setCountryName(countryCode === 'worldwide'? "Worldwide" :data.country);
         setCountryInfo(data);
-        setMapCenter((countryCode === 'worldwide')?{lat:34.80746, lng: -40.4796}:{lat: data.countryInfo.lat, lng: data.countryInfo.long});
+        setMapCenter((countryCode === 'worldwide')?[34.80746, -40.4796]:[data.countryInfo.lat, data.countryInfo.long]);
+        setMapZoom(4);
+        setMapCenter();
         setMapZoom(4);
         //console.log(data.countryInfo.lat,data.countryInfo.long);
       });   
@@ -105,12 +107,11 @@ function App() {
               cases = {prettyPrintStat(countryInfo.todayDeaths)} 
               total = {prettyPrintStat(countryInfo.deaths)}/>
           </div>
-
           <Map
-            casesType = {casesType}
-            countries = {mapCountries}
-            center = {mapCenter}
-            zoom = {mapZoom}
+            countries={mapCountries}
+            casesType={casesType}
+            center={mapCenter}
+            zoom={mapZoom}
           />
 
         </div>
@@ -118,7 +119,7 @@ function App() {
         <CardContent>
           <h3 style = {{textAlign:"center"}}>Live {casesType} by Country</h3>
           <Table countries = {tableData} casesType = {casesType}/>
-          <h3 style = {{textAlign:"center"}} className = 'app__graphTitle'>{countryName} new {casesType}</h3>
+          <h3 style = {{textAlign:"center"}} className = 'app__graphTitle'>{countryName} {casesType} timeline</h3>
           <LineGraph className = "app__graph" casesType = {casesType} country = {country}/>
         </CardContent>
       </Card>
