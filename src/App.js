@@ -18,6 +18,7 @@ function App() {
   const [mapZoom, setMapZoom] = useState(3);
   const [mapCountries, setMapCountries] = useState([]);
   const [casesType, setCasesType] = useState("cases");
+  const [allTime, setAllTime] = useState(true);
   useEffect(() =>{
     fetch("https://disease.sh/v3/covid-19/all")
     .then((response) => response.json())
@@ -34,14 +35,14 @@ function App() {
           name: country.country,
           value: country.countryInfo.iso2
         }));
-        let sortedData = sortData(data,casesType);
+        let sortedData = sortData(data,casesType, allTime);
         setTableData(sortedData);
         setCountries(countries);
         setMapCountries(data);
       });
     };
     getCountries();
-  },[casesType])
+  },[casesType, allTime])
   const onCountryChange = async(e) => {
     //https://disease.sh/v3/covid-19/all
     //https://disease.sh/v3/covid-19/countries/[countryCode]
@@ -117,8 +118,13 @@ function App() {
         </div>
         <Card className="app__right">
         <CardContent>
+          <div className="table__button">
+            <h4> Show Data For: </h4>
+            <button onClick = {() => setAllTime(false)}>24h</button>
+            <button onClick = {() => setAllTime(true)}>All-Time</button>
+          </div>
           <h3 style = {{textAlign:"center"}}>Live {casesType} by Country</h3>
-          <Table countries = {tableData} casesType = {casesType}/>
+          <Table countries = {tableData} casesType = {casesType} allTime = {allTime}/>
           <h3 style = {{textAlign:"center"}} className = 'app__graphTitle'>{countryName} {casesType} timeline</h3>
           <LineGraph className = "app__graph" casesType = {casesType} country = {country}/>
         </CardContent>

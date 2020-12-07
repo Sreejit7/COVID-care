@@ -74,3 +74,23 @@ body{
         flex-direction: column;
     }
 }
+.table__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table__button > h4{
+    margin-right: auto;
+    margin-left: 5px;
+}
+.table__button > button{
+    padding: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+    background-color: rgb(247, 193, 94);
+    border-radius: 2px;
+}
+.table__button > button:hover{
+    background-color: rgb(219, 78, 12);
+    color: white;
+}

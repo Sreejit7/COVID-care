@@ -1,12 +1,17 @@
 import numeral from 'numeral';
 import {Circle , Popup} from 'react-leaflet';
 import './Map.css';
-export const sortData = (data,casesType) => {
+export const sortData = (data, casesType, allTime) => {
+  let state = allTime.toString();
+  let combinedState = casesType + "-" + state;
   let sortedData = [...data];
-  switch(casesType){
-    case 'cases': return sortedData.sort((a,b) => (a.cases > b.cases? -1 : 1));
-    case 'recovered':  return sortedData.sort((a,b) => (a.recovered > b.recovered? -1 : 1));
-    case 'deaths':  return sortedData.sort((a,b) => (a.deaths > b.deaths? -1 : 1));
+  switch(combinedState){
+    case 'cases-true': return sortedData.sort((a,b) => (a.cases > b.cases? -1 : 1));
+    case 'cases-false': return sortedData.sort((a,b) => (a.todayCases > b.todayCases? -1 : 1));
+    case 'recovered-true':  return sortedData.sort((a,b) => (a.recovered > b.recovered? -1 : 1));
+    case 'recovered-false': return sortedData.sort((a,b) => (a.todayRecovered > b.todayRecovered? -1 : 1));
+    case 'deaths-true':  return sortedData.sort((a,b) => (a.deaths > b.deaths? -1 : 1));
+    case 'deaths-false':  return sortedData.sort((a,b) => (a.todayDeaths > b.todayDeaths? -1 : 1));
     default:
   }
   
