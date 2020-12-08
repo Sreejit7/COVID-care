@@ -16,7 +16,7 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  min-width: 500px;
+  border-collapse: collapse;
 }
 .vaccine__icon{
   color: black;
@@ -33,7 +33,7 @@
   display: flex;
   justify-content: space-between;
 }
-.vaccine__info td, .vaccine__header td{
+.vaccine__info td, .vaccine__header th{
   padding: 0.5rem;
   flex: 0.3;
   text-align: center;
@@ -46,7 +46,11 @@
   margin-right: auto;
   
 }
-.vaccine__header > h1,.vaccine__header >  tr{
+.vaccine__list{
+  margin-left: 50px;
+  text-align: left;
+}
+.vaccine__header > h1,.vaccine__header >  th{
   margin-top: -30px;
 }
 .vaccine__header > tr > td > h2{
@@ -63,4 +67,54 @@
 .trial--normal{
   color: rgb(39, 32, 32);
   font-weight: 500;
+}
+.manufacturer{
+  text-align: left;
+  margin-left: 50px;
+}
+@media 
+(max-width: 680px){
+  .vaccine__list{
+    display: block;
+    margin-left: 0;
+  }
+  .manufacturer{
+    margin-left: 0;
+  }
+  th > h2{
+    font-size: 16px;
+    text-align: center;
+  }
+	/* Force table to not be like tables anymore */
+	.vaccine__info,th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	th { 
+		/*position: absolute;
+		top: -9999px;
+		left: -9999px;*/
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+  }
 }

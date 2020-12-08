@@ -26,3 +26,10 @@
 .infobox__cases--green{
   color: rgb(88, 223, 88) !important;
 }
+@media (max-width: 460px) {
+  .infoBox{
+      margin-left: 15px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+  }
+}

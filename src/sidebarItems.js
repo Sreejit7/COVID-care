@@ -10,7 +10,7 @@ export const sidebarItems = [
     cName: "sidebar__text"
   },
   {
-    title: "Vaccine Info",
+    title: "COVID-19 Vaccine Info",
     path: "/vaccine",
     icon: <LocalHospitalIcon/>,
     cName: "sidebar__text"

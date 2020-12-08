@@ -32,7 +32,12 @@ body{
 }
 .app__header > h1{
     font-size: 2rem;
-    color: #fc3c3c;
+}
+.app__header-gr{
+    color: #70fa2a;
+}
+.app__header-red{
+    color: #ed0915;
 }
 .app__dropdown{
     background: white;
@@ -68,6 +73,12 @@ body{
 .app__stats{
     display: flex;
     justify-content: space-between;
+}
+@media (max-width: 460px) {
+    .app__stats{
+        flex-direction: column;
+        
+    }
 }
 @media (max-width: 990px) {
     .app__body{

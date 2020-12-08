@@ -64,3 +64,16 @@
 span{
   margin-left: 16px;
 }
+@media (max-width: 460px) {
+  .sidebar__menu{
+    width: 240px;
+    height: 210px;
+  }
+  .sidebar__logo{
+    height: 30px;
+    width: 150px;
+  }
+  .sidebar__text{
+    height: 40px;
+  }
+}

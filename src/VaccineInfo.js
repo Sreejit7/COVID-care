@@ -1,6 +1,4 @@
 import React,{useState,useEffect} from 'react';
-import InfoIcon from '@material-ui/icons/Info';
-import {Link} from 'react-router-dom';
 //import Popup from 'reactjs-popup';
 import './VaccineInfo.css';
 function VaccineInfo() {
@@ -22,9 +20,9 @@ function VaccineInfo() {
              alt = ""/> 
         <h1>COVID-19 VACCINE INFO</h1>
         <tr>
-          <td><h2>Vaccine Name</h2></td>
-          <td><h2 style = {{textAlign:"left",marginLeft:"50px"}}>Manufacturers</h2></td>
-          <td><h2>Current Trial Phase</h2></td>
+          <th><h2>Vaccine Name</h2></th>
+          <th><h2 className = "manufacturer">Manufacturers</h2></th>
+          <th><h2>Current Trial Phase</h2></th>
         </tr>
       </div>
       <div className = "vaccine__info">
@@ -35,7 +33,7 @@ function VaccineInfo() {
             </td>
             <td>{sponsors.map((item,index) => {
               return(                
-                <li style = {{textAlign:"left",marginLeft:"50px"}} 
+                <li className = "vaccine__list"
                     key = {index}>
                     {sponsors[0] !== "" ? item:" NA "}
                 </li> 

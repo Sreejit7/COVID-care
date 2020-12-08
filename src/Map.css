@@ -45,3 +45,8 @@
 .info-active{
   color: rgb(92, 12, 12);
 }
+@media (max-width: 500px){
+  .map{
+    margin-bottom: 15px;
+  }
+}
