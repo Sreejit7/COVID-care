@@ -118,3 +118,10 @@
 		white-space: nowrap;
   }
 }
+@media
+(max-width: 575 px){
+  /*td{
+    display: flex;
+    flex: 0.35;
+  }*/
+}

@@ -119,9 +119,9 @@ function App() {
         <Card className="app__right">
         <CardContent>
           <div className="table__button">
-            <h4> Show Data For: </h4>
-            <button onClick = {() => setAllTime(false)}>Last 24h</button>
-            <button onClick = {() => setAllTime(true)}>All-Time</button>
+            <h4> Showing Data For: </h4>
+            <button className = {allTime?'button-disabled':'button-enabled'} onClick = {() => setAllTime(false)}>Last 24h</button>
+            <button className = {!allTime?'button-disabled':'button-enabled'} onClick = {() => setAllTime(true)}>All-Time</button>
           </div>
           <h3 style = {{textAlign:"center"}}>Live {casesType} by Country</h3>
           <Table countries = {tableData} casesType = {casesType} allTime = {allTime}/>

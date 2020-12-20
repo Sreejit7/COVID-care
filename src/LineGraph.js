@@ -69,11 +69,12 @@ const buildChartData = (data, casesType) => {
       if(lastDataPoint){
         let newDataPoint = {
           x: date,
-          y: data[casesType][date] - lastDataPoint
+          y: (data[casesType][date] - lastDataPoint) < 0? 0: data[casesType][date] - lastDataPoint
         }
         chartData.push(newDataPoint);
       }
       lastDataPoint = data[casesType][date];
+      
     }  
   return chartData;
 };

@@ -12,8 +12,8 @@ function Sidebar() {
   }
   return (
     <div className='sidebar'>        
-        <div >
-            <Link to="#" className='sidebar__icon'>
+        <div>
+            <Link to="#" className='sidebar__icon'>             
                 <ReorderIcon fontSize = 'large' onClick={showSidebar} style={{color:'#fff'}}/>
             </Link>
         </div>

@@ -101,7 +101,15 @@ body{
     background-color: rgb(247, 193, 94);
     border-radius: 2px;
 }
+
+.button-disabled{
+    opacity: 0.2;
+}
+.button-enabled{
+    opacity: 1;
+}
 .table__button > button:hover{
     background-color: rgb(219, 78, 12);
     color: white;
+    opacity: 0.5;
 }
