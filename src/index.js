@@ -6,6 +6,7 @@ import App from './App';
 import VaccineInfo from './VaccineInfo';
 import Header from './Header';
 import Footer from './Footer';
+import News from './News';
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -13,6 +14,9 @@ ReactDOM.render(
       <Switch>
         <Route path = "/vaccine">
           <VaccineInfo/>
+        </Route>
+        <Route path = "/news">
+          <News/>
         </Route>
         <Route path = "/">
           <App />

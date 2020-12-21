@@ -1,7 +1,7 @@
 import React from 'react';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
 import TimelineIcon from '@material-ui/icons/Timeline';
-import InfoIcon from '@material-ui/icons/Info';
+import WhatshotIcon from '@material-ui/icons/Whatshot';
 export const sidebarItems = [
   {
     title: "COVID-19 Tracker",
@@ -15,5 +15,11 @@ export const sidebarItems = [
     icon: <LocalHospitalIcon/>,
     cName: "sidebar__text"
   },
+  {
+    title: "Latest COVID-19 Headlines",
+    path: "/news",
+    icon:  <WhatshotIcon/>,
+    cName: "sidebar__text"
+  }
   
 ]
