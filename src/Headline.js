@@ -5,7 +5,7 @@ function Headline({news}) {
   return (
     <div className = "headline">   
       <img className = "headline__image"
-           src = {news.urlToImage}
+           src = {news.image}
            alt = ""
       />    
       <div className="headline__content">

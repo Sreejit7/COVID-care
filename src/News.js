@@ -3,17 +3,11 @@ import Headline from './Headline';
 import './News.css';
 function News() {
   const [newsList, setNewsList] = useState([]);
-  const currentDate = new Date().toISOString().slice(0,10);
+  const currentDate = new Date().toISOString();
   //console.log(currentDate);
   
   useEffect(() => {
-    
-    const url = 'https://newsapi.org/v2/top-headlines?' +
-          'q=Covid&' +
-          `from=${currentDate}&` +
-          'language=en&' +
-          'sortBy=popularity&' +
-          'apiKey=ed9861bb6155418f9ed08909df48c54d';
+    const url = 'https://gnews.io/api/v4/search?q=Covid&lang=en&sortby=publishedAt&token=f556748f6689e5c7a5c0444335cded03';
     fetch(url)
     .then((response) => response.json())
     .then((data) => {
@@ -26,7 +20,7 @@ function News() {
   
   return (
     <div className = "covid__news">
-      <h1>COVID-19 HEADLINES</h1>
+      <h1>TOP 10 COVID-19 HEADLINES</h1>
       {newsList.map((news) => (
         <Headline news = {news}/>
       ))}

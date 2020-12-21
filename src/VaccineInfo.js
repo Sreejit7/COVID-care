@@ -9,7 +9,7 @@ function VaccineInfo() {
     .then((data) =>{
       setVaccineData(data.data);
       //console.log(data);
-      console.log(data.data);
+      //console.log(data.data);
     })
   },[])
   return (

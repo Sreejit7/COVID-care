@@ -41,6 +41,8 @@ body{
 }
 .app__dropdown{
     background: white;
+    position: relative;
+    z-index: -1;
 }
 .app__header{
     display: flex; 

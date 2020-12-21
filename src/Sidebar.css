@@ -14,13 +14,14 @@
 }
 .sidebar__menu{
   background-color: rgb(36, 35, 63);
-  width: 280px;
+  width: 270px;
   display: flex;
   justify-content: center;
   position: fixed;
   top: 0;
   left: -100%;
   transition: 850ms;
+  z-index: 1;
 }
 .sidebar__text{
   display: flex;
