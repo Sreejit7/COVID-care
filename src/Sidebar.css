@@ -67,7 +67,7 @@ span{
 @media (max-width: 460px) {
   .sidebar__menu{
     width: 240px;
-    height: 210px;
+    
   }
   .sidebar__logo{
     height: 30px;

@@ -24,7 +24,8 @@ function App() {
     .then((response) => response.json())
     .then((data) => {
       setCountryInfo(data);
-    })
+    });
+    console.log("Hi!! Welcome to COVID-CARE!");
   },[])
   useEffect(() => {
     const getCountries = async () => {

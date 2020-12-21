@@ -4,9 +4,11 @@ import './News.css';
 function News() {
   const [newsList, setNewsList] = useState([]);
   const currentDate = new Date().toISOString().slice(0,10);
-  console.log(currentDate);
+  //console.log(currentDate);
+  
   useEffect(() => {
-    const url = 'http://newsapi.org/v2/top-headlines?' +
+    
+    const url = 'https://newsapi.org/v2/top-headlines?' +
           'q=Covid&' +
           `from=${currentDate}&` +
           'language=en&' +
@@ -20,7 +22,7 @@ function News() {
     })
     .catch((err) => console.log(err.message));
   }, []);
-  console.log(newsList);
+  //console.log(newsList);
   
   return (
     <div className = "covid__news">
