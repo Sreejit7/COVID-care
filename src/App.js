@@ -15,7 +15,7 @@ function App() {
   const [countryInfo, setCountryInfo] = useState({});
   const [tableData, setTableData] = useState([]);
   const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
-  const [mapZoom, setMapZoom] = useState(3);
+  const [mapZoom, setMapZoom] = useState(2);
   const [mapCountries, setMapCountries] = useState([]);
   const [casesType, setCasesType] = useState("cases");
   const [allTime, setAllTime] = useState(true);
@@ -26,6 +26,9 @@ function App() {
       setCountryInfo(data);
     });
     console.log("Hi!! Welcome to COVID-CARE!");
+    console.log("COVID-CARE is a website designed for keeping track of COVID-19 pandemic data, vaccine details and news related to the pandemic.");
+    console.log("You can check out the GitHub repository if you are interested in contributing to COVID-CARE:");
+    console.log('https://github.com/Sreejit7/COVID-care');
   },[])
   useEffect(() => {
     const getCountries = async () => {

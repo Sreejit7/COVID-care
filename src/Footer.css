@@ -2,7 +2,6 @@
   display: flex;
   font-size: larger;
   font-weight: bolder;
-  height: 50px;
   width: 100%;
   background-color: rgb(3, 8, 32);
   color: white;
@@ -23,4 +22,9 @@
 .footer__items{
   display: flex;
   margin: auto;
+}
+@media(max-width: 355px){
+  .footer__items{
+    flex-direction: column;
+  }
 }

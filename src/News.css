@@ -3,8 +3,25 @@
   height: 100vh;
   overflow-y: scroll;
 }
-.covid__news > h1{
+.news__header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.news__header > h1{
   text-align: center;
   color: red;
-  
+}
+.news__icon{
+  color: red;
+  margin-left: 5px;
+  animation: rotation 1.5s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }

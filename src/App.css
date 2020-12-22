@@ -41,8 +41,6 @@ body{
 }
 .app__dropdown{
     background: white;
-    position: relative;
-    z-index: -1;
 }
 .app__header{
     display: flex; 
@@ -78,8 +76,10 @@ body{
 }
 @media (max-width: 460px) {
     .app__stats{
-        flex-direction: column;
-        
+        flex-direction: column; 
+    }
+    .app__dropdown{
+        width: 30%;
     }
 }
 @media (max-width: 990px) {

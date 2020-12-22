@@ -20,7 +20,9 @@ function News() {
   
   return (
     <div className = "covid__news">
-      <h1>TOP 10 COVID-19 HEADLINES</h1>
+      <div className="news__header">
+        <h1>TOP 10 COVID-19 HEADLINES</h1>
+      </div>      
       {newsList.map((news) => (
         <Headline news = {news}/>
       ))}
