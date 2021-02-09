@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# COVID-CARE <img align = "right" src ="https://img.shields.io/github/watchers/Sreejit7/COVID-care?style=social"> <img align = "right" src ="https://img.shields.io/github/stars/Sreejit7/COVID-care?style=social"><img align = "right" src= "https://img.shields.io/github/forks/Sreejit7/COVID-care?style=social">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<img src="https://img.shields.io/github/contributors/Sreejit7/COVID-care?style=for-the-badge">
+<img src="https://img.shields.io/tokei/lines/github/Sreejit7/COVID-care?style=for-the-badge">
+<img src="https://img.shields.io/github/last-commit/Sreejit7/COVID-care?style=for-the-badge">
+<img src="https://img.shields.io/github/languages/count/Sreejit7/COVID-care?style=for-the-badge">
+<img src="https://img.shields.io/github/languages/code-size/Sreejit7/COVID-care?style=for-the-badge" alt="code size">
+ </p>
+ 
+<p align="center">
+<img src="https://img.shields.io/github/issues/Sreejit7/COVID-care?style=for-the-badge" alt="open issues">
+<img src="https://img.shields.io/github/issues-closed/Sreejit7/COVID-care?style=for-the-badge" alt="closed issues">
+<img src="https://img.shields.io/github/issues-pr/Sreejit7/COVID-care?style=for-the-badge" alt="open pull request">
+<img src="https://img.shields.io/github/issues-pr-closed/Sreejit7/COVID-care?style=for-the-badge" alt="closed pull request">
+</p>
 
-## Available Scripts
 
-In the project directory, you can run:
+<p align="center">
+  <a href="https://github.com/Sreejit7/COVID-care">
+    <img src="./public/images/covid-care.png" alt = "Logo" height = "400">
+  </a>
+</p>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## About
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A COVID-19 Website created using [React.js](https://reactjs.org/), [chart.js](https://www.chartjs.org/), [disease.sh API](https://firebase.google.com/) and [GNews API](https://stripe.com/en-in). The website displays global COVID-19 pandemic data like confirmed cases, deaths & recoveries. The data can be varied according to your choice of country, time(24h or all-time). The Headlines section display the **Top-10 COVID-19 related news** accross the globe. The Vaccine Info section displays a list of **Upcoming vaccines and their details**.
+## Pre-requisites
 
-### `npm test`
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone this repo:
+  ```sh
+  git clone https://github.com/Sreejit7/COVID-care.git
+  ```
+2. Navigate into the project directory:
+  ```sh
+  cd COVID-care
+  ```
+3. Install the node-package-manager (npm):
+  ```sh
+  npm install
+  ```
+4. Run the project on your local browser:
+  ```sh
+  npm start
+  ```
+## Contributing
 
-### `npm run build`
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contact
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Let's get in touch and be a part of the dev community together!
+* [Portfolio](https://sreejit.dev)
+* [LinkedIn](https://www.linkedin.com/in/sreejit-de/)
+* [GitHub](https://www.github.com/Sreejit7)
