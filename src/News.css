@@ -1,7 +1,7 @@
 .covid__news{
   background-color: rgb(235, 232, 232);
-  height: 100vh;
-  overflow-y: scroll;
+  min-height: 100vh;
+  padding: 20px;
 }
 .news__header{
   display: flex;
