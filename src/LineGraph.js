@@ -93,8 +93,6 @@ function LineGraph({casesType, country, ...props}) {
           setNoData(false);
           let chartData = country === "worldwide"? buildChartData(data, casesType) : buildChartData(data.timeline, casesType);
           setData(chartData);
-          //console.log(chartData);
-          // buildChart(chartData);
         })
         .catch( err => setNoData(true));
     };

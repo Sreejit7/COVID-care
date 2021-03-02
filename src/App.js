@@ -1,6 +1,5 @@
 import { FormControl, MenuItem, Select,Card, CardContent} from "@material-ui/core";
 import React,{useEffect, useState} from "react";
-//import {Link} from 'react-router-dom';
 import InfoBox from './Infobox';
 import Map from './Map';
 import Table from './Table';
@@ -48,8 +47,6 @@ function App() {
     getCountries();
   },[casesType, allTime])
   const onCountryChange = async(e) => {
-    //https://disease.sh/v3/covid-19/all
-    //https://disease.sh/v3/covid-19/countries/[countryCode]
 
       const countryCode = e.target.value;
       

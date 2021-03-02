@@ -3,8 +3,6 @@ import Headline from './Headline';
 import './News.css';
 function News() {
   const [newsList, setNewsList] = useState([]);
-  const currentDate = new Date().toISOString();
-  //console.log(currentDate);
   
   useEffect(() => {
     const url = 'https://gnews.io/api/v4/search?q=Covid&lang=en&sortby=publishedAt&token=f556748f6689e5c7a5c0444335cded03';
@@ -16,7 +14,6 @@ function News() {
     })
     .catch((err) => console.log(err.message));
   }, []);
-  //console.log(newsList);
   
   return (
     <div className = "covid__news">

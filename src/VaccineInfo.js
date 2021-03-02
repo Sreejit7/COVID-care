@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react';
-//import Popup from 'reactjs-popup';
 import './VaccineInfo.css';
 function VaccineInfo() {
   const [vaccineData, setVaccineData] = useState([]);
@@ -8,8 +7,6 @@ function VaccineInfo() {
     .then((response) => response.json())
     .then((data) =>{
       setVaccineData(data.data);
-      //console.log(data);
-      //console.log(data.data);
     })
   },[])
   return (
